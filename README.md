@@ -55,4 +55,3 @@ This smart contract is a basic example for educational purposes and should be us
 [din080ss55@gmail.com]
 [07/12/2023]
 
-Feel free to customize this readme with your specific details, such as author information and additional disclaimers, as needed.
