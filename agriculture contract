@@ -1,2 +1,25 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
+contract Agriculture {
+    uint256 public numberOfPlants;  // Representing the number of plants
+
+    function plantSeeds(uint256 _initialPlants) public {
+        require(_initialPlants > 0, "Initial number of plants must be positive");
+        numberOfPlants = _initialPlants;
+    }    
+    function simulateCropGrowth() public {
+        uint256 newPlants = numberOfPlants * 5;
+        assert(newPlants > numberOfPlants); // Ensures the growth operation is valid
+        numberOfPlants = newPlants;
+    }
+
+    function harvestCrops() public {
+        if (numberOfPlants > 0) {
+            numberOfPlants = 0; // Harvesting the crops by setting the number of plants to zero
+        } else {
+            revert("Number of  remaining plants is already zero; nothing to harvest");
+        }
+    }
+}
 
